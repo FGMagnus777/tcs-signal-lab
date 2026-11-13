@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signal Lab | Why AI Matters in Communications and Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f1e8;--ink:#1c1b19;--mut:#5d5a52;--acc:#8a2b1f;--line:#d8d1c0;--card:#fbf8f1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,sans-serif}
+.w{max-width:880px;margin:0 auto;padding:0 24px}
+header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.k{font:13px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+h1{font:700 clamp(34px,6vw,58px)/1.08 Fraunces,serif;margin:12px 0 18px}
+h2{font:700 28px/1.2 Fraunces,serif;margin:0 0 12px}
+p.l{font-size:20px;color:var(--mut);max-width:640px;margin:0}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.c{background:var(--card);border:1px solid var(--line);padding:20px;border-radius:6px}
+.c h3{margin:0 0 6px;font:600 16px Inter}.c p{margin:0;font-size:15px;color:var(--mut)}
+a{color:var(--acc)}code,pre{font:14px 'JetBrains Mono',monospace}
+pre{background:#1c1b19;color:#f5f1e8;padding:18px;border-radius:6px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+@media(max-width:600px){body{font-size:16px}table,tbody,tr,td,th{display:block}th{display:none}td{border:0;padding:2px 0}tr{padding:10px 0;border-bottom:1px solid var(--line)}}
+footer{padding:32px 0 60px;color:var(--mut);font-size:14px}
+</style></head><body>
+<header><div class="w"><div class="k">The Cultured Scholar &middot; Signal Lab</div>
+<h1>Why AI matters in communications and intelligence</h1>
+<p class="l">A coding-evaluation project built on public sources. The page explains the stakes; the repository lets you test whether code, and the people or models writing it, can handle them.</p></div></header>
+<main class="w">
+<section><h2>Three reasons it matters</h2><div class="g">
+<div class="c"><h3>Volume</h3><p>Open-source material outruns human reading capacity. The <a href="https://www.dni.gov/files/ODNI/documents/IC_OSINT_Strategy.pdf">IC OSINT Strategy 2024-2026</a> calls OSINT the "INT of first resort."</p></div>
+<div class="c"><h3>Threat</h3><p>Generative models scale influence operations. OpenAI publishes <a href="https://openai.com/global-affairs/disrupting-malicious-uses-of-ai-june-2025/">takedown case studies</a> of such activity.</p></div>
+<div class="c"><h3>Trust</h3><p>Analysts and communicators must separate documented records from interpretation. Every item in the toolkit carries a source URL and date.</p></div>
+</div></section>
+<section><h2>Sources the toolkit uses</h2><table><tr><th>Source</th><th>Use</th><th>Key needed</th></tr>
+<tr><td><a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/">GDELT DOC 2.0</a></td><td>Global news article search</td><td>No</td></tr>
+<tr><td><a href="https://www.federalregister.gov/developers/documentation/api/v1">Federal Register API</a></td><td>US rules, notices, executive documents</td><td>No</td></tr>
+<tr><td><a href="https://unstats.un.org/sdgs/UNSDGAPIV5/swagger/index.html">UN SDG API</a></td><td>Goals and indicators for development context</td><td>No</td></tr>
+<tr><td><a href="https://huggingface.co/models">Hugging Face Hub</a></td><td>Model discovery for classifier tasks</td><td>No</td></tr></table></section>
+<section><h2>Evaluation tasks</h2><p>Six graded exercises, from deduplication to scored theme classification, each with an offline test suite and a 0-4 rubric covering correctness, tests, design, source integrity, and safety.</p>
+<pre>pip install -e ".[dev]"
+pytest -q
+python -m signal_lab.cli "AI deepfake election"</pre></section>
+</main>
+<footer><div class="w">&copy; 2026 The Cultured Scholar Strategic Communications, LLC. MIT licensed. Sources retain their own terms.</div></footer>
+</body></html>
